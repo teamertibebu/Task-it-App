@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
+    ></script>
+    <script src="index.js"></script>
+    <script src="handleSubmit.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>TODO LIST</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="upperDiv">
+        <input
+          type="text"
+          name="enterTask"
+          id="enterTask"
+          placeholder="List it!"
+          size="70"
+        />
+        <button id="taskItButton">Task it!</button>
+      </div>
+      <div id="lowerDiv"></div>
+    </div>
+    <script>
+      App.initialize();
+    </script>
+  </body>
+</html>
