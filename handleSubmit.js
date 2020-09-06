@@ -14,15 +14,16 @@ const App = {
     <div class='taskDiv' id='taskDiv${App.count}'>
     <div class='task'>${task}</div>
     <button class='untaskItButton' id='untaskItButton${App.count}'>Untask it!</button>
-    <input type='checkbox' class='completedTask'></input>
-    <label for='completedTask'>Task Completed!</label>
+    <input type='checkbox' id='completedTask${App.count}'></input>
+    <label for='completedTask${App.count}'>Task Completed!</label>
     </div>`;
     const buttonId = `#untaskItButton${App.count}`;
+    const checkboxId = `completedTask${App.count}`;
 
     App.count++;
     $("#lowerDiv").append(html);
     App.untaskButton(buttonId);
-    App.completedTask();
+    App.completedTask(checkboxId, buttonId);
   },
 
   untaskButton: (buttonId) => {
@@ -31,13 +32,13 @@ const App = {
     });
   },
 
-  completedTask: () => {
-    $('input[type="checkbox"]').click(() => {
-      console.log("outside");
-      if ($(this).prop("checked") == true) {
-        console.log("Checkbox is checked.");
-      } else if ($(this).prop("checked") == false) {
-        console.log("Checkbox is unchecked.");
+  completedTask: (checkboxId, buttonId) => {
+    const cb = document.getElementById(checkboxId);
+    $(cb).change(() => {
+      if (cb.checked) {
+        const temp = $(`#${checkboxId}`).parent("div");
+        $(`#${checkboxId}`).parent("div").remove();
+        $("#completedDiv").append(temp);
       }
     });
   },
