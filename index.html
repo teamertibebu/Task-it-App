@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="images/check.jpg" />
+    <script src="https://use.fontawesome.com/2a8e4e64ca.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"
     ></script>
-    <script src="index.js"></script>
-    <script src="handleSubmit.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>TODO LIST</title>
+    <title>Task It!</title>
   </head>
   <body>
-    <div id="main">
-      <div id="upperDiv">
-        <input
-          type="text"
-          name="enterTask"
-          id="enterTask"
-          placeholder="List it!"
-          size="70"
-        />
-        <button id="taskItButton">Task it!</button>
-      </div>
-      <div id="lowerDiv"></div>
-      <div id="completedDiv">Completed Tasks:</div>
+    <h1>Task it!</h1>
+    <div id="upperDiv">
+      <input
+        type="text"
+        name="enterTask"
+        id="enterTask"
+        placeholder="Enter Task..."
+        size="70"
+      />
+      <button id="taskItButton">Task it!</button>
     </div>
+    <div id="lowerDiv"></div>
+    <div id="footerDiv"></div>
+
+    <script src="index.js"></script>
+    <script src="handleSubmit.js"></script>
     <script>
       App.initialize();
     </script>

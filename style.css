@@ -2,31 +2,204 @@ body {
   background-color: #cc5500;
 }
 
-#main {
-  background-color: antiquewhite;
-  width: 50%;
-  height: 770px;
-  text-align: center;
-  margin: auto;
-}
-
-div {
-  display: block;
+#upperDiv {
+  position: relative;
+  left: 25%;
+  top: 300px;
 }
 
 #lowerDiv {
-  margin: auto;
+  border-radius: 5px;
+  position: relative;
+  left: 25.1%;
+  top: 300px;
+  width: 50.4%;
+  margin: 10px 0 10px 0;
+}
+
+#footerDiv {
+  position: relative;
+  left: 925px;
+  top: 290px;
 }
 
 .taskDiv {
-  /* position: relative; */
-  width: 50%;
-  border: 3px solid black;
+  background-color: white;
+  border-top: 1px solid gray;
   padding: 10px;
-  margin: 20px;
 }
 
-.task {
-  font-weight: bold;
+#enterTask {
+  width: 50%;
+  height: 50px;
+  font-size: 40px;
+}
+
+h1 {
+  position: absolute;
+  bottom: 325px;
+  left: 360px;
+  font-family: "Pacifico", cursive;
+  font-style: italic;
+  font-size: 200px;
+  color: black;
+}
+
+.check {
+  position: absolute;
+  left: -17px;
   font-size: 30px;
+  color: green;
+  opacity: 1;
+}
+
+#clearButton {
+  position: absolute;
+  background-color: green;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.5s;
+  height: 40px;
+  color: white;
+  border: 1px solid;
+  transition: 0.5s;
+}
+
+#clearButton:hover {
+  background-color: firebrick;
+}
+
+/*
+********************************** Task It! Button ***********************************************
+*/
+#taskItButton {
+  position: absolute;
+  height: 52px;
+  top: 2px;
+  left: 644px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+#taskItButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#taskItButton:after {
+  content: "\00ab";
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  top: 17px;
+  left: -30px;
+  transition: 0.5s;
+}
+
+#taskItButton:hover {
+  opacity: 1;
+}
+
+#taskItButton:hover:after {
+  opacity: 1;
+  font-size: 30px;
+  left: -20px;
+  top: 7px;
+}
+/*
+********************************** Completed Task Button ***********************************************
+*/
+
+.completedTaskButton {
+  position: relative;
+  font-size: 15.1px;
+  bottom: 27.2px;
+  left: 9.5px;
+  cursor: pointer;
+  background-color: green;
+  border: none;
+  color: white;
+  text-decoration: none;
+  float: right;
+  height: 36px;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.completedTaskButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.completedTaskButton:after {
+  content: "\2713";
+  position: absolute;
+  opacity: 0;
+  top: 8.5px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.completedTaskButton:hover {
+  padding-right: 25px;
+  opacity: 1;
+}
+
+.completedTaskButton:hover:after {
+  opacity: 0.5;
+  right: 8px;
+  top: 8.5px;
+}
+/*
+********************************** Untask It! Button ***********************************************
+*/
+.untaskItButton {
+  position: relative;
+  font-size: 15.1px;
+  bottom: 27.2px;
+  left: 9px;
+  cursor: pointer;
+  background-color: firebrick;
+  border: none;
+  color: white;
+  text-decoration: none;
+  float: right;
+  height: 36px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.untaskItButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.untaskItButton:after {
+  content: "\00d7";
+  position: absolute;
+  opacity: 0;
+  top: 9.5px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.untaskItButton:hover {
+  padding-right: 25px;
+  opacity: 1;
+}
+
+.untaskItButton:hover:after {
+  opacity: 0.5;
+  right: 8px;
+  top: 9.5px;
 }
